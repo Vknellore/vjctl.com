@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VJ Cloud Tech - SAP Cloud Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/jpeg" href="logo.jpeg">
+<meta name="description" content="VJ Cloud Tech empowers businesses with expert SAP Cloud implementation, migration, and integration solutions.">
+<meta property="og:title" content="VJ Cloud Tech - SAP Cloud Solutions">
+<meta property="og:description" content="Empowering Businesses with SAP Cloud Solutions">
+<meta property="og:image" content="logo.jpeg">
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        background-color: #f0f2f5;
+        color: #333;
+        scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    nav {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1a73e8;
+        padding: 0 40px;
+        z-index: 1000;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo-left {
+        height: 55px;
+        width: auto;
+        border-radius: 10px;
+        object-fit: contain;
+        mix-blend-mode: lighten; /* helps blend the white background */
+        transition: transform 0.3s ease;
+        display: block;
+    }
+
+    .logo-left:hover {
+        transform: scale(1.05);
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .nav-right a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+        font-size: 1.05em;
+        position: relative;
+    }
+
+    .nav-right a:hover {
+        color: #ffdd57;
+    }
+
+    .nav-right a::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #ffdd57;
+        transition: width 0.3s;
+    }
+
+    .nav-right a:hover::after {
+        width: 100%;
+    }
+
+    header {
+        background: linear-gradient(135deg, #1a73e8, #0f4c81);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+
+    header h1 {
+        font-size: 3em;
+        margin: 0;
+        animation: fadeInDown 1s ease-out;
+    }
+
+    header p {
+        font-size: 1.2em;
+        margin-top: 10px;
+        opacity: 0.85;
+        animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-50px);}
+        to { opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(50px);}
+        to { opacity: 1; transform: translateY(0);}
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 0 20px;
+    }
+
+    h2 {
+        color: #1a73e8;
+        font-size: 2em;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    .card {
+        background-color: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    .vision {
+        background-color: #e8f0fe;
+        padding: 40px 20px;
+        border-radius: 15px;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    .contact {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        margin-bottom: 60px;
+    }
+
+    .contact p {
+        font-size: 1.1em;
+        margin: 10px 0;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        margin-top: 20px;
+        background: #1a73e8;
+        color: white;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+        background: #0f4c81;
+        transform: translateY(-3px);
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px 10px;
+        background: #1a73e8;
+        color: white;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+
+    footer img {
+        height: 40px;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+        nav {
+            flex-direction: column;
+            height: auto;
+            padding: 10px 20px;
+        }
+        .logo-left {
+            height: 45px;
+        }
+        .nav-right {
+            margin-top: 10px;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <img src="logo.jpeg" alt="VJ CloudTech Logo" class="logo-left">
+    <div class="nav-right">
+        <a href="#services">Services</a>
+        <a href="#vision">Vision</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- Header -->
+<header>
+    <h1>VJ Cloud Tech</h1>
+    <p>Empowering Businesses with SAP Cloud Solutions</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+</header>
+
+<!-- Services -->
+<div class="container" id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="card"><h3>💻 SAP Cloud Implementation</h3><p>Comprehensive deployment of SAP Cloud solutions, from planning and architecture to go-live support.</p></div>
+        <div class="card"><h3>☁️ SAP Cloud Migration</h3><p>Seamless migration of on-premise SAP systems to the cloud, minimizing downtime and ensuring data integrity.</p></div>
+        <div class="card"><h3>🔗 SAP Integration</h3><p>Connecting SAP Cloud with third-party applications for improved process automation and data flow.</p></div>
+        <div class="card"><h3>⚡ Cloud Optimization & Support</h3><p>Ongoing optimization, monitoring, and support to maximize SAP Cloud performance.</p></div>
+        <div class="card"><h3>📚 Training & Change Management</h3><p>Empowering teams with the knowledge and tools needed to effectively use SAP Cloud technology.</p></div>
+    </div>
+</div>
+
+<!-- Vision -->
+<div class="container vision" id="vision">
+    <h2>Our Vision</h2>
+    <p>At VJ Cloud Tech, our vision is to be a trusted global leader in SAP Cloud transformation. 
+    We strive to build lasting partnerships with clients through innovation, transparency, and commitment to excellence.</p>
+</div>
+
+<!-- Contact -->
+<div class="container contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>📧 Email: VjCTl@outlook.com</p>
+    <p>📞 Phone: +41 7563716225</p>
+    <p>🔗 LinkedIn ID: VJ Cloudtech</p>
+    <p>📍 Address: SL12HX, Slough, London, UK</p>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 VJ CloudTech. All Rights Reserved ®</p>
+    <img src="logo.jpeg" alt="VJ CloudTech Registered Logo">
+</footer>
+
+</body>
+</html>
